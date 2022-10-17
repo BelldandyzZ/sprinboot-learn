@@ -1,0 +1,37 @@
+person:
+ username: Yuno
+ boss: false
+ birth: 2020/12/04
+ age: 18
+ pet:
+  petName: 大黄
+  age: 4
+ interfaces:
+  - i1
+  - i2
+  - i3
+ animal: [a1,a2,a3]
+ score:
+  one: 1
+  two: 2
+ salaries: [2.4,43.5,5345.4]
+ allPets:
+   list1:
+     - {petName: 大黄,age: 2}
+     - {petName: 大黄2,age: 21}
+     - {petName: 大黄3,age: 212}
+   list2:
+     - {petName: 小黄,age: 2}
+     - {petName: 小黄2,age: 22}
+     - {petName: 小黄3,age: 2}
+
+
+
+
+
+
+
+
+
+
+
