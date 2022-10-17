@@ -1,13 +1,13 @@
-package com.atguigu;
+package com.autguigu.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class MainApplication {
+public class Chapter04Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(MainApplication.class,args);
+        SpringApplication.run(Chapter04Application.class, args);
     }
+
 }

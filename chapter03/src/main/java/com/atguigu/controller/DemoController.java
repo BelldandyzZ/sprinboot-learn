@@ -2,11 +2,13 @@ package com.atguigu.controller;
 
 import com.atguigu.domain.Person;
 import com.atguigu.domain.User;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
+@Slf4j
 @RestController
 public class DemoController {
 
@@ -18,6 +20,7 @@ public class DemoController {
 
     @RequestMapping("/findPerson")
     public Person findPerson(){
+        log.info("进入了findPerson");
         return person;
     }
 
