@@ -253,7 +253,7 @@ private void addResourceHandler(ResourceHandlerRegistry registry, String pattern
 
 ```
 
-# 二、请求参数的处理
+# 二、SpringMVC执行流程原理
 
 ## 补充①1SpringMVC的执行流程
 
@@ -733,4 +733,75 @@ public interface HandlerMethodReturnValueHandler {
 
 }
 ```
+
+## ④视图解析器原理
+
+```
+暂时忽略
+```
+
+
+
+# 三、拦截器
+
+## ①拦截器的使用
+
+## ②拦截器的原理
+
+
+
+# 四、文件上传
+
+##  ①文件上传的使用
+
+## ②文件上传的原理
+
+
+
+# 五、错误处理
+
+## ①默认的错误处理机制
+
+- 对于同步请求，会自动生成一个error页面
+- 对于异步请求，会自动生成错误的Json信息
+- 如果再templates中建立了/error文件夹，那么全局请求出现错误后默认跳转到/error的页面。命名以'4xx.html'，'5xx.html'
+
+## ②错误处理的自动配置原理
+
+
+
+## ③SpringBoot中的错误处理的几种方式
+
+- 在templates的error文件夹下使用"4XX","5XX"的错误页面
+- 自定义全局异常处理器，给最先执行的优先级(就是实现异常处理的接口)
+- 使用注解的全局异常`ControllerAdvice`
+
+
+
+# 六、Web原生组件的注入
+
+## ①Servlet
+
+- 编写`Servlet`，配置`WebServlet`注解，还要在启动类写扫描的注解（`ServletComponentScan`）
+- 在配置类里使用RegistrationBean，这种方式主要是用来整合项目中已经存在的Servlet
+
+## ②Filter
+
+- 编写`Filter`，配置`WebFilter`注解，还要在启动类写扫描的注解（`ServletComponentScan`）
+- 在配置类里使用RegistrationBean，这种方式主要是用来整合项目中已经存在的Filter
+
+## ③Listener
+
+- 编写`Listener`，配置`WebListener`注解，还要在启动类写扫描的注解（`ServletComponentScan`）
+- 在配置类里使用RegistrationBean，这种方式主要是用来整合项目中已经存在的Listener
+
+## ④执行顺序
+
+```
+监听器----->过滤器----->自定义Servlet----->DispatchServlet
+```
+
+
+
+# 七、内置Servlet容器
 
